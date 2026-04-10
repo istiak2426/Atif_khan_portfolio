@@ -43,7 +43,7 @@ const Contact = () => {
       <RiMessengerLine className='contact__option-icon'/>
           <h4>Messenger</h4>
           <h5>#</h5>
-          <a href='' target="__blank">Send a message</a>
+          <a href="https://atifhossainkhan.vercel.app/" target="__blank">Send a message</a>
         </article>
 
         <article className='contact__option'>
