@@ -1,101 +1,92 @@
 import React from 'react'
 import './portfolio.css'
-import IMG1 from '../../assets/style.PNG'
-import IMG2 from '../../assets/burger.PNG'
-import IMG3 from '../../assets/hotel.PNG'
-import IMG4 from '../../assets/photo.PNG'
-
-import IMG7 from '../../assets/IMG7.jpg'
-import IMG8 from '../../assets/IMG8.jpg'
-
 
 const data = [
   {
     id: 1,
-    images: IMG7,
-    title: "Zapito Zibon Blog Website",
-    github: "https://github.com/istiak2426/newssite.git",
-    demo: "https://zapitozibon.vercel.app/"
+    image: "https://via.placeholder.com/600x400",
+    title: "E-Commerce UI Design Concept",
+    desc: "A modern shopping experience focused on clean UI, smooth navigation, and product clarity.",
+    github: "#",
+    demo: "#"
   },
   {
     id: 2,
-    images: IMG8,
-    title: "RSAutomotive - Auto Parts E-Commerce Website",
-    github: "https://github.com/istiak2426/simple-ecommerce.git",
-    demo: "https://rsautomotive.vercel.app/"
+    image: "https://via.placeholder.com/600x400",
+    title: "Blog Platform UI Layout",
+    desc: "A minimal and readable blog interface designed for better content consumption.",
+    github: "#",
+    demo: "#"
   },
   {
     id: 3,
-    images: IMG1,
-    title: "StyleSense E-Commerce App",
-    github: "https://github.com/istiak2426/stylesense.git",
-    demo: "https://stylesensebd.vercel.app"
+    image: "https://via.placeholder.com/600x400",
+    title: "Food Delivery App UI",
+    desc: "Interactive food ordering experience with intuitive user flow and visuals.",
+    github: "#",
+    demo: "#"
   },
   {
     id: 4,
-    images: IMG2,
-    title: "Burger Builder App",
-    github: "https://github.com/istiak2426/burgerbuilder.git",
-    demo: "https://burgerbuilder2426.netlify.app"
+    image: "https://via.placeholder.com/600x400",
+    title: "Hotel Booking Interface",
+    desc: "User-friendly booking system with structured layout and smooth UX flow.",
+    github: "#",
+    demo: "#"
   },
   {
     id: 5,
-    images: IMG3,
-    title: "Hotel Booking App",
-    github: "https://github.com/istiak2426/hotel_booking.git",
-    demo: "https://hotelbooking2426.netlify.app"
+    image: "https://via.placeholder.com/600x400",
+    title: "Photo Gallery UI Concept",
+    desc: "Minimal gallery design focusing on visual hierarchy and image presentation.",
+    github: "#",
+    demo: "#"
   },
   {
     id: 6,
-    images: IMG4,
-    title: "Photo Gallery App",
-    github: "https://github.com/istiak2426/photogallery2426.git",
-    demo: "https://photogallery2426.herokuapp.com"
-  },
-  // {
-  //   id: 7,
-  //   images: IMG5,
-  //   title: "HealthOS B2B E-Commerce",
-  //   github: "https://github.com/istiak2426/healthOS-Client.git",
-  //   demo: "https://healthos-final.netlify.app"
-  // },
-  // {
-  //   id: 8,
-  //   images: IMG6,
-  //   title: "Basic API with JWT Token",
-  //   github: "https://github.com/istiak2426/API_with_JWT.git",
-  //   demo: "https://adminpanel2426.netlify.app/"
-  // }
+    image: "https://via.placeholder.com/600x400",
+    title: "Dashboard UI Design",
+    desc: "Clean admin dashboard layout with data visualization and modern UI components.",
+    github: "#",
+    demo: "#"
+  }
 ]
+
 const Portfolio = () => {
   return (
-	<section id='portfolio'>
-    <h5>My Recent Work</h5>
-    <h2>Portfolio</h2>
+    <section id='portfolio'>
+      <h5>UI/UX Design Showcase</h5>
+      <h2>Selected Works</h2>
 
-    <div className='container portfolio__container'>
+      <div className='container portfolio__container'>
 
-      {data.map((d)=>{
+        {data.map((d) => {
+          return (
+            <article className='portfolio__item' key={d.id}>
 
-return (
-  <article className='portfolio__item'>
-        <div className="portfolio__item-image">
-          <img src={d.images} alt="" />
-        </div>
-        <h3>{d.title}</h3>
-        <div className="portfolio__item-cta">
-        <a href={d.github} className='btn' target='_blank' rel="noopener noreferrer">Github</a>
-        <a href={d.demo} className='btn btn-primary' target='_blank' rel="noopener noreferrer">Live Demo</a>
-        </div>
-      </article>
+              <div className="portfolio__item-image">
+                <img src={d.image} alt={d.title} />
+              </div>
 
-)
-      })}
-      
+              <div className="portfolio__content">
+                <h3>{d.title}</h3>
+                <p>{d.desc}</p>
 
-      
-      
-    </div>
+                <div className="portfolio__item-cta">
+                  <a href={d.github} className='btn' target='_blank' rel="noopener noreferrer">
+                    Case Study
+                  </a>
+                  <a href={d.demo} className='btn btn-primary' target='_blank' rel="noopener noreferrer">
+                    Live Preview
+                  </a>
+                </div>
+              </div>
+
+            </article>
+          )
+        })}
+
+      </div>
     </section>
   )
 }
