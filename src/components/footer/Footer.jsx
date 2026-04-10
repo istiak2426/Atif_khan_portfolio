@@ -26,13 +26,13 @@ const Footer = () => {
     <a href="https://www.facebook.com/share/1bJyeBsK34/" target='_blank' rel="noopener noreferrer">
       <FaFacebookF/>
       </a>
-      <a href="#" target='_blank' rel="noopener noreferrer">
+      <a href="" target='_blank' rel="noopener noreferrer">
       <BsLinkedin />
       </a>
-      <a href="#" target='_blank'  rel="noopener noreferrer">
+      <a href="" target='_blank'  rel="noopener noreferrer">
       <BsGithub/>
       </a>
-      <a href='#' target='_blank' rel="noopener noreferrer">
+      <a href='' target='_blank' rel="noopener noreferrer">
       <IoLogoTwitter />
       </a>
 
