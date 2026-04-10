@@ -10,7 +10,7 @@ const Footer = () => {
   return (
 	<footer>
 
-   <a href='#top' className='footer__logo'>Shah Istiak Shanto</a>
+   <a href='#top' className='footer__logo'>Atif Hossain Khan</a>
     <ul className='permalinks'>
       <li><a href='#top'>Home</a></li>
       <li><a href='#about'>About</a></li>
@@ -23,16 +23,16 @@ const Footer = () => {
     </ul>
 
     <div className='footer__socials'>
-    <a href="https://www.facebook.com/istiak2426" target='_blank' rel="noopener noreferrer">
+    <a href="https://www.facebook.com/share/1bJyeBsK34/" target='_blank' rel="noopener noreferrer">
       <FaFacebookF/>
       </a>
-      <a href="https://www.linkedin.com/in/istiak2426" target='_blank' rel="noopener noreferrer">
+      <a href="#" target='_blank' rel="noopener noreferrer">
       <BsLinkedin />
       </a>
-      <a href="https://github.com/istiak2426" target='_blank'  rel="noopener noreferrer">
+      <a href="#" target='_blank'  rel="noopener noreferrer">
       <BsGithub/>
       </a>
-      <a href='https://twitter.com/Istiaksikder' target='_blank' rel="noopener noreferrer">
+      <a href='#' target='_blank' rel="noopener noreferrer">
       <IoLogoTwitter />
       </a>
 
@@ -40,7 +40,7 @@ const Footer = () => {
     </div>
 
     <div className='footer__copyright'>
-      <small>&copy; Shah Istiak Shanto. All rights reserved. </small>
+      <small>&copy; Atif Hossain Khan. All rights reserved. </small>
 
     </div>
 
