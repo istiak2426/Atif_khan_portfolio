@@ -1,82 +1,103 @@
 .services__container {
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
-	gap: 3rem;
+	gap: 2.5rem;
 }
 
+/* SERVICE CARD */
 .service {
 	background: var(--color-bg-variant);
-	border-radius: 0 0 2rem 2rem;
-	border: 1px solid var(--color-primary);
+	border-radius: 1.5rem;
+	border: 1px solid transparent;
 	height: fit-content;
-	transition: var(--transition);
+
+	transition: all 0.3s ease-in-out;
+	box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+	overflow: hidden;
 }
 
-.services:hover{
-
-	background: transparent;
+/* HOVER EFFECT (FIXED) */
+.service:hover {
+	background: rgba(255, 255, 255, 0.02);
 	border-color: var(--color-primary-variant);
+	transform: translateY(-8px);
 	cursor: default;
-
+	box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
 }
 
+/* HEADER SECTION */
 .service__head {
-	background: var(--color-primary);
+	background: linear-gradient(
+		135deg,
+		var(--color-primary),
+		var(--color-primary-variant)
+	);
+
 	padding: 2rem;
 	border-radius: 0 0 2rem 2rem;
-	box-shadow: 0 2rem 1rem rgba(0, 0, 0, 0.1);
-}
-
-.service__head h3{
-	color: var(-color-bg);
-	font-size: 1rem;
 	text-align: center;
-
-
+	box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
 }
 
+/* HEADER TEXT (FIXED TYPO) */
+.service__head h3 {
+	color: var(--color-bg);
+	font-size: 1rem;
+	font-weight: 600;
+	letter-spacing: 1px;
+}
+
+/* CONTENT AREA */
 .service__list {
 	padding: 2rem;
 }
 
+/* LIST ITEM */
 .service__list li {
 	display: flex;
-	gap:1rem;
-	margin-bottom: 0.8rem;
+	gap: 1rem;
+	margin-bottom: 1rem;
+	transition: 0.3s ease;
 }
 
-.service__list-icon{
+/* ICON */
+.service__list-icon {
 	color: var(--color-primary);
-	margin-top: 2px;
-	font-size: 2rem;
-
+	margin-top: 4px;
+	font-size: 1.4rem;
+	flex-shrink: 0;
 }
 
-.service__list p{
+/* TEXT */
+.service__list p {
 	font-size: 0.9rem;
+	line-height: 1.5;
+	opacity: 0.9;
 }
 
-@media screen and (max-width:1024px) {
+/* HOVER ON LIST ITEMS */
+.service__list li:hover {
+	transform: translateX(5px);
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media screen and (max-width: 1024px) {
 
 	.services__container {
 		grid-template-columns: 1fr 1fr;
 		gap: 2rem;
 	}
-
-	.service {
-		height: auto;
-
-	}
-
 }
 
-/* ====media queries small device===== */
+@media screen and (max-width: 600px) {
 
-@media screen and (max-width:600px) {
-
-	.services__container{
+	.services__container {
 		grid-template-columns: 1fr;
 		gap: 1.5rem;
 	}
-}
 
+	.service {
+		border-radius: 1.2rem;
+	}
+}
