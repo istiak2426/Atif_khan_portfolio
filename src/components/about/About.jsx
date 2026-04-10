@@ -37,8 +37,9 @@ const About = () => {
           </article>
         </div>
 
-        <p>I design clean, functional, and meaningful user experiences for the web
-Blending design thinking with modern frontend development.</p>
+        <p>I am a UI/UX focused developer who enjoys creating clean, user-friendly and visually appealing interfaces.
+
+My goal is to improve user experience through thoughtful design, smooth interactions, and modern web technologies. </p>
 
           <a href="#contact" className="btn btn-primary">Let's Talk</a>
       </div>
