@@ -1,0 +1,298 @@
+/* ========== GOOGLE FONTS (Optional) ========== */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+/* ========== CSS VARIABLES ========== */
+:root {
+  --color-primary: #4db5ff;
+  --color-bg: #1f1f38;
+  --color-white: #fff;
+  --color-light: rgba(255, 255, 255, 0.6);
+  --transition: all 0.4s ease;
+}
+
+/* ========== BASE STYLES ========== */
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: var(--color-bg);
+  color: var(--color-white);
+  line-height: 1.7;
+}
+
+/* ========== HEADER SECTION ========== */
+header {
+  height: 100vh;
+  padding-top: 2.5rem;
+  overflow: hidden;
+  position: relative;
+}
+
+.header__container {
+  text-align: center;
+  height: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ========== HEADER CONTENT ========== */
+.header__content {
+  margin-bottom: 2rem;
+  z-index: 1;
+}
+
+.header__content h3 {
+  font-weight: 400;
+  margin: 0.5rem 0;
+}
+
+.header__content h1 {
+  font-size: 2.5rem;
+  margin: 0.5rem 0;
+}
+
+.text-light {
+  font-weight: 300;
+  opacity: 0.8;
+}
+
+/* ========== CTA BUTTONS ========== */
+.cta {
+  margin-top: 1.5rem;
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.cta a {
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  font-weight: 500;
+  transition: var(--transition);
+}
+
+.cta a:first-child {
+  background: var(--color-primary);
+  color: var(--color-bg);
+  border: 1px solid transparent;
+}
+
+.cta a:first-child:hover {
+  background: transparent;
+  color: var(--color-primary);
+  border-color: var(--color-primary);
+}
+
+.cta a:last-child {
+  background: transparent;
+  color: var(--color-primary);
+  border: 1px solid var(--color-primary);
+}
+
+.cta a:last-child:hover {
+  background: var(--color-primary);
+  color: var(--color-bg);
+  border-color: transparent;
+}
+
+/* ========== SOCIALS (LEFT SIDE) ========== */
+.header__socials {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.8rem;
+  position: absolute;
+  left: 2rem;
+  bottom: 3rem;
+  z-index: 2;
+}
+
+.header__socials::after {
+  content: '';
+  width: 1px;
+  height: 2rem;
+  background: var(--color-primary);
+}
+
+.header__socials a {
+  color: var(--color-white);
+  font-size: 1.2rem;
+  transition: var(--transition);
+}
+
+.header__socials a:hover {
+  color: var(--color-primary);
+  transform: translateY(-3px);
+}
+
+/* ========== PROFILE IMAGE - RECTANGLE (NOT OVAL) ========== */
+.me {
+  background: linear-gradient(var(--color-primary), transparent);
+  width: 22rem;
+  height: 30rem;
+  position: relative;
+  margin: 2rem auto 0;
+  border-radius: 0.5rem;  /* ← RECTANGLE with small rounded corners */
+  overflow: hidden;
+  padding: 0;
+}
+
+.me img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+}
+
+/* ========== SCROLL DOWN (RIGHT SIDE) ========== */
+.scroll__down {
+  position: absolute;
+  right: -2.3rem;
+  bottom: 5rem;
+  transform: rotate(90deg);
+  font-weight: 300;
+  font-size: 0.9rem;
+  text-decoration: none;
+  color: var(--color-white);
+  transition: var(--transition);
+  z-index: 2;
+}
+
+.scroll__down:hover {
+  color: var(--color-primary);
+}
+
+/* ========== MEDIA QUERIES (TABLETS) ========== */
+@media screen and (max-width: 1024px) {
+  header {
+    height: auto;
+    min-height: 100vh;
+    padding: 2rem 0;
+  }
+  
+  .me {
+    width: 18rem;
+    height: 26rem;
+  }
+  
+  .header__socials {
+    left: 1rem;
+  }
+}
+
+/* ========== MEDIA QUERIES (MOBILE) ========== */
+@media screen and (max-width: 600px) {
+  header {
+    height: auto;
+    min-height: 100vh;
+    padding: 1.5rem 0 2rem;
+  }
+  
+  .header__container {
+    justify-content: flex-start;
+    padding-top: 2rem;
+  }
+  
+  .header__content {
+    margin-bottom: 1.5rem;
+    padding: 0 1rem;
+  }
+  
+  .header__content h1 {
+    font-size: 1.8rem;
+  }
+  
+  .header__content h3 {
+    font-size: 1rem;
+  }
+  
+  .cta {
+    gap: 0.8rem;
+  }
+  
+  .cta a {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.9rem;
+  }
+  
+  /* HIDE SOCIALS ON MOBILE */
+  .header__socials {
+    display: none;
+  }
+  
+  /* HIDE SCROLL DOWN ON MOBILE */
+  .scroll__down {
+    display: none;
+  }
+  
+  /* RECTANGLE IMAGE ON MOBILE */
+  .me {
+    width: 16rem;
+    height: 22rem;
+    margin: 1rem auto 0;
+    border-radius: 0.5rem;  /* Keep rectangle shape */
+  }
+  
+  .me img {
+    object-position: top center;
+  }
+}
+
+/* ========== EXTRA SMALL DEVICES (below 400px) ========== */
+@media screen and (max-width: 400px) {
+  .header__content h1 {
+    font-size: 1.5rem;
+  }
+  
+  .me {
+    width: 14rem;
+    height: 20rem;
+  }
+  
+  .cta {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.6rem;
+  }
+  
+  .cta a {
+    width: 80%;
+    text-align: center;
+  }
+}
+
+/* ========== ANIMATIONS (Optional) ========== */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.header__content {
+  animation: fadeInUp 0.8s ease;
+}
+
+.me {
+  animation: fadeInUp 1s ease 0.2s both;
+}
+
+.cta {
+  animation: fadeInUp 0.8s ease 0.4s both;
+}
