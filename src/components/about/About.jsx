@@ -21,7 +21,7 @@ const About = () => {
           <article className="about__card">
             <FaAward className="about__icon" />
             <h5>Experience</h5>
-            <small>4+ years Working</small>
+            <small>5+ years Working</small>
           </article>
 
           <article className="about__card">
@@ -37,7 +37,8 @@ const About = () => {
           </article>
         </div>
 
-        <p>I am a self-taught full-stack developer with a B.Sc. in Computer Science, specializing in building scalable, high-performance applications with a focus on clean architecture and real-world problem solving.</p>
+        <p>I design clean, functional, and meaningful user experiences for the web
+Blending design thinking with modern frontend development.</p>
 
           <a href="#contact" className="btn btn-primary">Let's Talk</a>
       </div>
